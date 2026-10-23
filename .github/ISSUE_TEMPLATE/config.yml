@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Hindsight guide
+    url: https://hardlineinteractive.com/mods/hindsight/
+    about: How everything works, step by step.
+  - name: Questions and fixes
+    url: https://hardlineinteractive.com/mods/hindsight/faq/
+    about: Answers to common questions and fixes for the usual problems.

@@ -1,0 +1,93 @@
+name: Bug report
+description: Something in Hindsight doesn't work as it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! The more of this you fill in, the faster it can be fixed.
+        Please check the [FAQ](https://hardlineinteractive.com/mods/hindsight/faq/) and the existing issues first.
+  - type: dropdown
+    id: area
+    attributes:
+      label: What's it about?
+      options:
+        - Session replays (recording, watching, the editor)
+        - Video export or photos
+        - Build timelapses
+        - Opening or converting ReplayMod / Flashback replays
+        - Servers (setup, commands, settings)
+        - Crash or won't start
+        - Something else
+    validations:
+      required: true
+  - type: input
+    id: minecraft
+    attributes:
+      label: Minecraft version
+      placeholder: "1.21.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: loader
+    attributes:
+      label: Loader
+      options:
+        - NeoForge
+        - Fabric
+    validations:
+      required: true
+  - type: input
+    id: loader_version
+    attributes:
+      label: Loader version
+      description: Shown in your launcher, or at the top of `logs/latest.log`.
+      placeholder: "NeoForge 21.1.251 / Fabric Loader 0.19.5"
+    validations:
+      required: true
+  - type: input
+    id: hindsight
+    attributes:
+      label: Hindsight version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where does it happen?
+      options:
+        - Singleplayer
+        - On a server that has Hindsight
+        - On a server without Hindsight
+        - Not sure
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead. Steps to make it happen again help most.
+      placeholder: |
+        1. Opened a replay from the Replays screen
+        2. Pressed Export video
+        3. The game froze at 40%
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: |
+        Drag `logs/latest.log` from your game folder into this box (it uploads the file). If the game crashed, add the
+        newest file from `crash-reports/` as well.
+    validations:
+      required: true
+  - type: textarea
+    id: mods
+    attributes:
+      label: Other mods
+      description: Other mods you have installed, or the name of the modpack.
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Screenshots, a short video, or the replay file (zip it first) if it helps show the problem.

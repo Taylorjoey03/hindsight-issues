@@ -1,0 +1,21 @@
+name: Feature idea
+description: Suggest something Hindsight could do.
+labels: ["idea"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: What would you like Hindsight to do?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What it's for
+      description: What you'd use it for (a kind of video, a server feature, a workflow), so it can be made to fit.
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Examples from other mods or games, sketches, screenshots.
